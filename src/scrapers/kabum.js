@@ -1,5 +1,5 @@
 import { createStealthPage, randomDelay } from '../utils/browser.js';
-import { parsePrice, sanitizeTitle, normalizeUrl } from '../utils/formatters.js';
+import { parsePrice, sanitizeTitle, ensureDirectProductUrl } from '../utils/formatters.js';
 
 const STORE_NAME = 'Kabum';
 const BASE_URL = 'https://www.kabum.com.br';
@@ -61,7 +61,7 @@ export async function scrapeKabum(browser) {
           originalPrice: item.oldPrice ? parsePrice(item.oldPrice).formatted : null,
           discount: item.discount,
           store: STORE_NAME,
-          url: normalizeUrl(item.url, BASE_URL),
+          url: ensureDirectProductUrl(STORE_NAME, item.url, item.title, BASE_URL),
           image: item.image || null
         });
       }
@@ -100,7 +100,7 @@ export async function scrapeKabum(browser) {
           originalPrice: item.oldPrice ? parsePrice(item.oldPrice).formatted : null,
           discount: item.discount,
           store: STORE_NAME,
-          url: normalizeUrl(item.url, BASE_URL),
+          url: ensureDirectProductUrl(STORE_NAME, item.url, item.title, BASE_URL),
           image: item.image || null
         });
       }

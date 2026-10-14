@@ -140,6 +140,21 @@ function applyFiltersAndSort() {
 }
 
 /**
+ * Sanitiza URLs garantindo protocolo HTTP/HTTPS e evitando double encoding.
+ * @param {string} url 
+ * @returns {string}
+ */
+function sanitizeUrl(url) {
+  if (!url) return '#';
+  try {
+    const parsed = new URL(url);
+    return ['http:', 'https:'].includes(parsed.protocol) ? parsed.href : '#';
+  } catch {
+    return '#';
+  }
+}
+
+/**
  * Renderiza os cards de produtos no DOM.
  * @param {Array} deals 
  */
@@ -157,8 +172,8 @@ function renderDeals(deals) {
     const safePrice = escapeHtml(deal.price);
     const safeOldPrice = deal.originalPrice ? escapeHtml(deal.originalPrice) : null;
     const safeDiscount = deal.discount ? escapeHtml(deal.discount) : null;
-    const safeUrl = encodeURI(deal.url);
-    const safeImage = deal.image ? encodeURI(deal.image) : null;
+    const safeUrl = sanitizeUrl(deal.url);
+    const safeImage = deal.image ? sanitizeUrl(deal.image) : null;
 
     const discountBadgeHtml = safeDiscount
       ? `<span class="discount-badge">${safeDiscount}</span>`

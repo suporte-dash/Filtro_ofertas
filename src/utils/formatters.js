@@ -19,13 +19,10 @@ export function parsePrice(rawPrice) {
 
   let numeric = 0;
   if (cleaned.includes(',') && cleaned.includes('.')) {
-    // Ex: 1.234,56
     numeric = parseFloat(cleaned.replace(/\./g, '').replace(',', '.'));
   } else if (cleaned.includes(',')) {
-    // Ex: 1234,56
     numeric = parseFloat(cleaned.replace(',', '.'));
   } else if (cleaned.includes('.')) {
-    // Ex: 1234.56
     numeric = parseFloat(cleaned);
   } else {
     numeric = parseFloat(cleaned) || 0;
@@ -52,6 +49,51 @@ export function sanitizeTitle(rawTitle) {
     .replace(/[\r\n\t]+/g, ' ')
     .replace(/\s{2,}/g, ' ')
     .trim();
+}
+
+/**
+ * Garante que o link leve diretamente ao produto. Se o scraper capturar uma URL genérica da loja,
+ * gera automaticamente o link direto de busca do produto específico na loja oficial.
+ * @param {string} store 
+ * @param {string} rawUrl 
+ * @param {string} title 
+ * @param {string} baseUrl 
+ * @returns {string}
+ */
+export function ensureDirectProductUrl(store, rawUrl, title, baseUrl) {
+  const cleanTitle = sanitizeTitle(title);
+  const encodedTitle = encodeURIComponent(cleanTitle);
+
+  // Se a URL capturada for vazia ou for a página inicial/geral de ofertas
+  const isGeneric = !rawUrl || 
+    rawUrl === baseUrl || 
+    rawUrl.endsWith('/ofertas') || 
+    rawUrl.endsWith('/ofertas/') ||
+    rawUrl.includes('/selecao/ofertasdodia') ||
+    rawUrl === 'https://www.americanas.com.br/' ||
+    rawUrl === 'https://www.kabum.com.br/ofertas';
+
+  if (!isGeneric) {
+    try {
+      return new URL(rawUrl, baseUrl).href;
+    } catch {
+      // continua para fallback
+    }
+  }
+
+  // Fallbacks diretos para a página de compra do produto na loja oficial
+  switch (store) {
+    case 'Mercado Livre':
+      return `https://lista.mercadolivre.com.br/${encodedTitle}`;
+    case 'Magazine Luiza':
+      return `https://www.magazineluiza.com.br/busca/${encodedTitle}/`;
+    case 'Americanas':
+      return `https://www.americanas.com.br/busca/${encodedTitle}`;
+    case 'Kabum':
+      return `https://www.kabum.com.br/busca?query=${encodedTitle}`;
+    default:
+      return rawUrl || baseUrl;
+  }
 }
 
 /**

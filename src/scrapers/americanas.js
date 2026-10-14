@@ -1,5 +1,5 @@
 import { createStealthPage, randomDelay, autoScroll } from '../utils/browser.js';
-import { parsePrice, sanitizeTitle, normalizeUrl } from '../utils/formatters.js';
+import { parsePrice, sanitizeTitle, ensureDirectProductUrl } from '../utils/formatters.js';
 
 const STORE_NAME = 'Americanas';
 const BASE_URL = 'https://www.americanas.com.br';
@@ -95,7 +95,7 @@ export async function scrapeAmericanas(browser) {
         originalPrice: item.oldPrice ? parsePrice(item.oldPrice).formatted : null,
         discount: null,
         store: STORE_NAME,
-        url: normalizeUrl(item.url, BASE_URL),
+        url: ensureDirectProductUrl(STORE_NAME, item.url, item.title, BASE_URL),
         image: item.image || null
       });
     }

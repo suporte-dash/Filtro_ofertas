@@ -1,5 +1,5 @@
 import { createStealthPage, randomDelay, autoScroll } from '../utils/browser.js';
-import { parsePrice, sanitizeTitle, normalizeUrl } from '../utils/formatters.js';
+import { parsePrice, sanitizeTitle, ensureDirectProductUrl } from '../utils/formatters.js';
 
 const STORE_NAME = 'Mercado Livre';
 const BASE_URL = 'https://www.mercadolivre.com.br';
@@ -94,7 +94,7 @@ export async function scrapeMercadoLivre(browser) {
         originalPrice: item.oldPrice ? parsePrice(item.oldPrice).formatted : null,
         discount: item.discount ? item.discount.replace(/\s+/g, ' ') : null,
         store: STORE_NAME,
-        url: normalizeUrl(item.url, BASE_URL),
+        url: ensureDirectProductUrl(STORE_NAME, item.url, item.title, BASE_URL),
         image: item.image || null
       });
     }
