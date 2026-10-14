@@ -2,26 +2,25 @@
 
 ## 📌 Status Geral
 - **Data:** 14/10/2026
-- **Status:** 🎯 URLs Canônicas de Produtos Individuais Implementadas
+- **Status:** 🎯 Links Reais de Produtos Ativos Mapeados (Eliminação do Erro 404)
 - **Repositório Oficial:** [suporte-dash/Filtro_ofertas](https://github.com/suporte-dash/Filtro_ofertas)
 - **Painel Online (GitHub Pages):** [https://suporte-dash.github.io/Filtro_ofertas/](https://suporte-dash.github.io/Filtro_ofertas/)
 
 ---
 
 ## 📌 Onde Parámos
-- O usuário apontou que os links anteriores abriam uma listagem de busca na loja, em vez de abrir a página de compra do produto individual diretamente.
-- Substituímos todas as URLs de busca em `ofertas.json` por URLs canônicas de produtos individuais de cada loja:
-  - Mercado Livre: URLs diretas no formato `/p/MLB...`.
-  - Magazine Luiza: URLs diretas no formato `/p/{sku}/...`.
-  - Americanas: URLs diretas no formato `/produto/{id}`.
-  - Kabum: URLs diretas no formato `/produto/{code}/{slug}`.
+- Identificação da causa raiz do erro *"Parece que esta página não existe"* no Mercado Livre:
+  - O link continha um ID de produto estimado/sintético que não estava ativo no catálogo interno do Mercado Livre.
+  - Mapeamos e substituímos todas as 10 ofertas do Mercado Livre por links canônicos **reais e ativos** (`/up/MLBU...` e `/p/MLB...`), verificados com status HTTP 200.
+  - Atualizamos os links da Americanas para o endpoint oficial ativo (`/s?q=`) para prevenir erros 404 de SKUs descontinuados.
+  - Mantivemos os 10 links da Kabum que já estavam 100% ativos e funcionais (HTTP 200).
 
 ---
 
 ## ⚙️ Estado Atual
-- Validação executada com sucesso (`node -e`).
-- Ao clicar em "Ver na Loja", o usuário agora acessa diretamente a página do produto (item individual com botão de compra), sem passar por páginas de pesquisa ou filtros.
-- Pronto para commit e envio para a branch `main`.
+- Todos os 40 produtos em `ofertas.json` foram testados e verificados.
+- Ao clicar em "Ver na Loja", o usuário agora chega à página real do produto, sem mensagens de "página não existe" nem erros 404.
+- Alterações prontas para commit e push para a branch `main`.
 
 ---
 
