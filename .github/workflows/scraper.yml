@@ -1,0 +1,55 @@
+name: Scraper Diário de Ofertas
+
+on:
+  schedule:
+    # Executa todos os dias às 03:00 UTC (00:00 Horário de Brasília - Meia-noite)
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Permite disparo manual pelo painel de Actions do GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ⚙️ Configurar Node.js (v20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Instalar dependências
+        run: |
+          npm ci || npm install
+
+      - name: 🌐 Instalar binários do navegador Chrome para Puppeteer
+        run: |
+          npx puppeteer browsers install chrome
+
+      - name: 🚀 Executar Scraper de Ofertas
+        run: |
+          npm run scrape
+
+      - name: 💾 Commit e Push automático das ofertas
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Adiciona apenas o arquivo ofertas.json
+          git add ofertas.json
+          
+          # Verifica se houve alteração no arquivo antes de commitar
+          if git diff --staged --quiet; then
+            echo "Nenhuma alteração detectada em ofertas.json. Nenhum commit necessário."
+          else
+            git commit -m "chore(data): atualiza ofertas diárias [skip ci]"
+            git push origin HEAD:${{ github.ref }}
+            echo "ofertas.json atualizado e enviado com sucesso para a branch principal!"
+          fi

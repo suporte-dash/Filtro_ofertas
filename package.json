@@ -1,0 +1,28 @@
+{
+  "name": "monitor-ofertas-diarias",
+  "version": "1.0.0",
+  "description": "Sistema de monitoramento e extração de ofertas diárias em e-commerces brasileiros com dashboard estático",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "scrape": "node src/index.js",
+    "test": "node --check src/index.js"
+  },
+  "keywords": [
+    "scraper",
+    "puppeteer",
+    "stealth",
+    "deals",
+    "ecommerce",
+    "brazil",
+    "ofertas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^23.6.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

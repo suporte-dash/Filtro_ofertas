@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radar de Ofertas | Monitor Diário de E-commerce Brasil</title>
+  <meta name="description" content="Acompanhe as melhores ofertas diárias do Mercado Livre, Magazine Luiza, Americanas e Kabum em tempo real.">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Principal -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">⚡</div>
+        <div>
+          <h1 class="brand-title">Radar de Ofertas</h1>
+          <p class="brand-subtitle">Monitor diário dos maiores e-commerces do Brasil</p>
+        </div>
+      </div>
+      
+      <div class="update-badge" id="updateBadge">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span id="updateText">Carregando status...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Container de Controles (Busca, Filtros de Loja e Ordenação) -->
+  <main class="main-container">
+    <section class="controls-panel" aria-label="Filtros e ordenação">
+      <!-- Barra de Busca -->
+      <div class="search-wrapper">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input 
+          type="search" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Buscar produto ou marca..." 
+          aria-label="Buscar produtos por nome"
+          autocomplete="off"
+        >
+        <button id="clearSearchBtn" class="clear-search-btn" aria-label="Limpar busca" style="display: none;">✕</button>
+      </div>
+
+      <!-- Barra de Ferramentas: Filtros de Loja e Ordenação -->
+      <div class="filters-row">
+        <!-- Abas de Lojas (Horizontal scroll suave no mobile) -->
+        <nav class="store-tabs" id="storeTabs" aria-label="Filtrar por loja">
+          <button class="tab-btn active" data-store="all" aria-pressed="true">
+            Todas <span class="tab-count" id="countAll">0</span>
+          </button>
+          <button class="tab-btn" data-store="Mercado Livre" aria-pressed="false">
+            Mercado Livre <span class="tab-count" id="countML">0</span>
+          </button>
+          <button class="tab-btn" data-store="Magazine Luiza" aria-pressed="false">
+            Magalu <span class="tab-count" id="countMagalu">0</span>
+          </button>
+          <button class="tab-btn" data-store="Americanas" aria-pressed="false">
+            Americanas <span class="tab-count" id="countAmericanas">0</span>
+          </button>
+          <button class="tab-btn" data-store="Kabum" aria-pressed="false">
+            Kabum <span class="tab-count" id="countKabum">0</span>
+          </button>
+        </nav>
+
+        <!-- Dropdown de Ordenação -->
+        <div class="sort-wrapper">
+          <label for="sortSelect" class="sort-label">Ordenar:</label>
+          <select id="sortSelect" class="sort-select" aria-label="Ordenar produtos">
+            <option value="featured">Em Destaque</option>
+            <option value="price-asc">Menor Preço</option>
+            <option value="price-desc">Maior Preço</option>
+            <option value="name-asc">Nome (A - Z)</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo de Resultados -->
+    <div class="results-summary" id="resultsSummary" aria-live="polite">
+      Mostrando <strong id="visibleCount">0</strong> ofertas
+    </div>
+
+    <!-- 4 Estados da Aplicação: Skeleton / Dados / Erro / Vazio -->
+    
+    <!-- 1. Estado de Skeleton (Carregamento) -->
+    <div id="skeletonContainer" class="deals-grid" aria-hidden="true">
+      <!-- 8 Cards Skeletons gerados via JS ou HTML estático inicial -->
+      <div class="deal-card skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-pill"></div>
+          <div class="skeleton-line full"></div>
+          <div class="skeleton-line half"></div>
+          <div class="skeleton-price"></div>
+          <div class="skeleton-btn"></div>
+        </div>
+      </div>
+      <div class="deal-card skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-pill"></div>
+          <div class="skeleton-line full"></div>
+          <div class="skeleton-line half"></div>
+          <div class="skeleton-price"></div>
+          <div class="skeleton-btn"></div>
+        </div>
+      </div>
+      <div class="deal-card skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-pill"></div>
+          <div class="skeleton-line full"></div>
+          <div class="skeleton-line half"></div>
+          <div class="skeleton-price"></div>
+          <div class="skeleton-btn"></div>
+        </div>
+      </div>
+      <div class="deal-card skeleton-card">
+        <div class="skeleton-img"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-pill"></div>
+          <div class="skeleton-line full"></div>
+          <div class="skeleton-line half"></div>
+          <div class="skeleton-price"></div>
+          <div class="skeleton-btn"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Grid de Produtos (Sucesso) -->
+    <div id="dealsGrid" class="deals-grid" style="display: none;"></div>
+
+    <!-- 3. Estado de Erro -->
+    <div id="errorState" class="state-container" style="display: none;">
+      <div class="state-icon error-icon" aria-hidden="true">⚠️</div>
+      <h2 class="state-title">Falha ao carregar ofertas</h2>
+      <p class="state-desc" id="errorMessage">
+        Não foi possível recuperar os dados de 'ofertas.json'. Verifique se o scraper já foi executado ou se há conexão.
+      </p>
+      <button id="retryBtn" class="primary-btn">
+        <span>Tentar Novamente</span>
+      </button>
+    </div>
+
+    <!-- 4. Estado Vazio -->
+    <div id="emptyState" class="state-container" style="display: none;">
+      <div class="state-icon empty-icon" aria-hidden="true">🔎</div>
+      <h2 class="state-title">Nenhuma oferta encontrada</h2>
+      <p class="state-desc">Nenhum produto corresponde aos filtros ou termo de busca selecionados.</p>
+      <button id="resetFiltersBtn" class="secondary-btn">
+        <span>Limpar Filtros e Busca</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>Radar de Ofertas Diárias • Scraping automatizado com Node.js & Puppeteer Stealth</p>
+      <p class="footer-disclaimer">Todos os preços e disponibilidades estão sujeitos a alterações diretas nas lojas oficiais.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
