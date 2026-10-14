@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-14T14:15:00.000Z",
-  "updatedAtFormatted": "quarta-feira, 14 de outubro de 2026 às 11:15:00 Horário de Brasília",
+  "updatedAt": "2026-10-14T14:47:38.926Z",
+  "updatedAtFormatted": "quarta-feira, 14 de outubro de 2026 às 11:47:38",
   "totalDeals": 40,
   "stores": {
+    "Kabum": 10,
     "Mercado Livre": 10,
     "Magazine Luiza": 10,
-    "Americanas": 10,
-    "Kabum": 10
+    "Americanas": 10
   },
   "deals": [
     {
@@ -310,104 +310,104 @@
       "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&auto=format&fit=crop&q=80"
     },
     {
-      "title": "Placa de Vídeo RTX 4060 Ti Ventus 2X Black 8GB OC MSI",
-      "price": "R$ 2.499,99",
-      "priceNumeric": 2499.99,
-      "originalPrice": "R$ 3.299,99",
-      "discount": "24% OFF",
+      "title": "Cadeira Gamer Husky Storm 100, Até 120kg, Almofadas, Reclinável 135º, PU, Preta - HCG100PT",
+      "price": "R$ 529,90",
+      "priceNumeric": 529.9,
+      "originalPrice": "R$ 588,78",
+      "discount": "10% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/475107/placa-de-video-rtx-4060-ti-ventus-2x-black-8gb-oc-msi",
-      "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/311424",
+      "image": "https://images.kabum.com.br/produtos/fotos/311424/cadeira-gamer-husky-storm-100-ate-120kg-almofadas-reclinavel-135-pu-preta-hcg100pt_1774547645_original.jpg"
     },
     {
-      "title": "Processador AMD Ryzen 7 5700X3D 3.0GHz (4.1GHz Turbo) AM4",
-      "price": "R$ 1.349,99",
-      "priceNumeric": 1349.99,
-      "originalPrice": "R$ 1.899,99",
-      "discount": "28% OFF",
+      "title": "Cadeira Gamer Husky Tempest 700, Até 145kg, Almofadas, Reclinável 150º, PU, Descanso para Pés, Cinza - HCG700CZ",
+      "price": "R$ 1.099,90",
+      "priceNumeric": 1099.9,
+      "originalPrice": "R$ 1.222,11",
+      "discount": "10% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/520369/processador-amd-ryzen-7-5700x3d-3-0ghz-4-1ghz-max-turbo-am4",
-      "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/134178",
+      "image": "https://images.kabum.com.br/produtos/fotos/134178/cadeira-gamer-husky-tempest-700-ate-145kg-almofadas-reclinavel-150-pu-descanso-para-pes-cinza-hcg700cz_1760036978_original.jpg"
     },
     {
-      "title": "SSD Kingston NV2 1TB M.2 2280 PCIe NVMe 3500MB/s",
-      "price": "R$ 379,99",
-      "priceNumeric": 379.99,
-      "originalPrice": "R$ 499,99",
-      "discount": "24% OFF",
+      "title": "Mesa Gamer Husky Snow, Preto - Superfície em Fibra de Carbono, Suporte para Headset e Copo, Resistente à Umidade - HDG100",
+      "price": "R$ 499,99",
+      "priceNumeric": 499.99,
+      "originalPrice": "R$ 555,54",
+      "discount": "10% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/384077/ssd-kingston-nv2-1tb-m-2-2280-pcie-nvme-leitura-3500mb-s-e-gravacao-2100mb-s-snv2s-1000g",
-      "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/151914",
+      "image": "https://images.kabum.com.br/produtos/fotos/151914/mesa-gamer-husky-snow-preto-superficie-em-fibra-de-carbono-suporte-para-headset-e-copo-resistente-a-umidade-hdg100_1768919217_original.jpg"
     },
     {
-      "title": "Memória RAM Corsair Vengeance LPX 16GB (2x8GB) 3200MHz DDR4",
-      "price": "R$ 269,99",
-      "priceNumeric": 269.99,
-      "originalPrice": "R$ 369,99",
-      "discount": "27% OFF",
+      "title": "Cadeira Gamer Husky Storm 100, Até 120kg, Almofadas, Reclinável 135º, PU, Preta E Branca - HCG100PTBR",
+      "price": "R$ 529,90",
+      "priceNumeric": 529.9,
+      "originalPrice": "R$ 588,78",
+      "discount": "10% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/84471/memoria-corsair-vengeance-lpx-16gb-2x8gb-3200mhz-ddr4-cl16-preta-cmk16gx4m2b3200c16",
-      "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/833991",
+      "image": "https://images.kabum.com.br/produtos/fotos/833991/cadeira-gamer-husky-storm-100-ate-120kg-almofadas-reclinavel-135-pu-preta-e-branca-hcg100ptbr_1774548809_original.jpg"
     },
     {
-      "title": "Fonte Corsair CV650 650W 80 Plus Bronze PFC Ativo",
-      "price": "R$ 349,99",
-      "priceNumeric": 349.99,
-      "originalPrice": "R$ 459,99",
-      "discount": "23% OFF",
+      "title": "Cadeira Gamer Husky Storm 100, Até 120kg, Almofadas, Reclinável 135º, Tecido, Preta - HCG100PTT",
+      "price": "R$ 529,90",
+      "priceNumeric": 529.9,
+      "originalPrice": "R$ 588,78",
+      "discount": "10% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/109696/fonte-corsair-cv650-650w-80-plus-bronze-pfc-ativo-com-cabo-preto-cp-9020236-br",
-      "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/886242",
+      "image": "https://images.kabum.com.br/produtos/fotos/886242/cadeira-gamer-husky-storm-100-ate-120kg-almofadas-reclinavel-135-tecido-preta-hcg100ptt_1774548094_original.jpg"
     },
     {
-      "title": "Gabinete Gamer Rise Mode Galaxy Glass Lateral Vidro Temperado",
-      "price": "R$ 299,99",
-      "priceNumeric": 299.99,
-      "originalPrice": "R$ 419,99",
-      "discount": "28% OFF",
+      "title": "Cadeira Gamer Husky Tempest 700, Até 145kg, Almofadas, Reclinável 150º, PU, Descanso para Pés, Preta - HCG700PT",
+      "price": "R$ 1.099,90",
+      "priceNumeric": 1099.9,
+      "originalPrice": "R$ 1.222,11",
+      "discount": "10% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/320908/gabinete-gamer-rise-mode-galaxy-glass-standard-lateral-e-frontal-em-vidro-temperado-preto-rm-ga-gg-st-fb",
-      "image": "https://images.unsplash.com/photo-1587202372616-b43abea06c2a?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/134176",
+      "image": "https://images.kabum.com.br/produtos/fotos/134176/cadeira-gamer-husky-tempest-700-ate-145kg-almofadas-reclinavel-150-pu-descanso-para-pes-preta-hcg700pt_1760035650_original.jpg"
     },
     {
-      "title": "Water Cooler Rise Mode Aura Frost Pro 240mm ARGB",
-      "price": "R$ 249,99",
-      "priceNumeric": 249.99,
-      "originalPrice": "R$ 359,99",
-      "discount": "30% OFF",
+      "title": "Cadeira Gamer Husky Tempest 700, Até 145kg, Almofadas, Reclinável 150º, PU, Descanso para Pés, Branca - HCG700BR",
+      "price": "R$ 1.099,90",
+      "priceNumeric": 1099.9,
+      "originalPrice": "R$ 1.222,11",
+      "discount": "10% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/471926/water-cooler-rise-mode-aura-frost-pro-240mm-argb-preto-rm-waf-03-argb",
-      "image": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/134179",
+      "image": "https://images.kabum.com.br/produtos/fotos/134179/cadeira-gamer-husky-tempest-700-ate-145kg-almofadas-reclinavel-150-pu-descanso-para-pes-branca-hcg700br_1760101546_original.jpg"
     },
     {
-      "title": "Mouse Gamer Logitech G502 HERO 25.600 DPI RGB Lightsync",
-      "price": "R$ 279,99",
-      "priceNumeric": 279.99,
-      "originalPrice": "R$ 389,99",
-      "discount": "28% OFF",
+      "title": "Cadeira Gamer Husky Tempest 700, Até 145kg, Almofadas, Reclinável 150º, PU, Descanso para Pés, Preta e Vermelha - HCG700PTVR",
+      "price": "R$ 1.099,90",
+      "priceNumeric": 1099.9,
+      "originalPrice": "R$ 1.222,11",
+      "discount": "10% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/98504/mouse-gamer-logitech-g502-hero-com-sensor-hero-25k-rgb-lightsync-11-botoes-programaveis-e-peso-ajustavel-preto-910-005550",
-      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/134177",
+      "image": "https://images.kabum.com.br/produtos/fotos/134177/cadeira-gamer-husky-tempest-700-ate-145kg-almofadas-reclinavel-150-pu-descanso-para-pes-preta-e-vermelha-hcg700ptvr_1760036256_original.jpg"
     },
     {
-      "title": "Headset Gamer HyperX Cloud Stinger 2 Core Som Espacial",
-      "price": "R$ 189,99",
-      "priceNumeric": 189.99,
-      "originalPrice": "R$ 269,99",
-      "discount": "29% OFF",
+      "title": "Cadeira Gamer Rise Mode Z11, Ângulo Ajustável, Tecido, Preto - RM-CG-Z11-BK",
+      "price": "R$ 469,01",
+      "priceNumeric": 469.01,
+      "originalPrice": "R$ 515,40",
+      "discount": "9% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/392945/headset-gamer-hyperx-cloud-stinger-2-core-drivers-40mm-p2-preto-683l9aa",
-      "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/1007914",
+      "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/1007914/xlarge/Cadeira-Gamer-Rise-Mode-Z11-ngulo-Ajust-vel-Tecido-Preto-RM-CG-Z11-BK_1787324021.jpg"
     },
     {
-      "title": "Teclado Mecânico Gamer Redragon Kumara Switch Outemu Blue",
-      "price": "R$ 159,99",
-      "priceNumeric": 159.99,
-      "originalPrice": "R$ 229,99",
-      "discount": "30% OFF",
+      "title": "Cadeira Gamer Husky Tempest 700, Até 145kg, Almofadas, Reclinável 150º, Tecido, Descanso para Pés, Preta - HCG700PTT",
+      "price": "R$ 1.099,90",
+      "priceNumeric": 1099.9,
+      "originalPrice": "R$ 1.222,11",
+      "discount": "10% OFF",
       "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/129759/teclado-mecanico-gamer-redragon-kumara-led-vermelho-switch-outemu-blue-pt-k552-2-pt-blue",
-      "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=400&auto=format&fit=crop&q=80"
+      "url": "https://www.kabum.com.br/produto/886244",
+      "image": "https://images.kabum.com.br/produtos/fotos/886244/cadeira-gamer-husky-tempest-700-ate-145kg-almofadas-reclinavel-150-tecido-descanso-para-pes-preta-hcg700ptt_1760549495_original.jpg"
     }
   ]
 }
