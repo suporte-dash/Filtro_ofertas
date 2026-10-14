@@ -2,29 +2,27 @@
 
 ## 📌 Status Geral
 - **Data:** 14/10/2026
-- **Status:** Concluído com Sucesso e Testado
-- **Objetivo:** Aplicação completa de monitoramento e agregação de ofertas diárias (Mercado Livre, Magazine Luiza, Americanas, Kabum), com painel estático resiliente para GitHub Pages e esteira de automação diária no GitHub Actions.
+- **Status:** Correção do GitHub Actions Workflow (Lockfile e Node.js 22)
+- **Repositório Oficial:** [suporte-dash/Filtro_ofertas](https://github.com/suporte-dash/Filtro_ofertas)
+- **Painel Online (GitHub Pages):** [https://suporte-dash.github.io/Filtro_ofertas/](https://suporte-dash.github.io/Filtro_ofertas/)
 
 ---
 
 ## 📌 Onde Parámos
-- Entrega de toda a arquitetura da solução:
-  1. **Backend Scraper**: Implementado em Node.js com Puppeteer Stealth, modularizado com funções dedicadas por loja e isolamento de falhas via `try/catch`.
-  2. **Frontend Web**: Painel estático moderno (`index.html`, `styles.css`, `app.js`) com CSS Grid, responsivo (Mobile-First estrito com alvos de toque >= 48px), 4 estados de resiliência (Skeleton animado, Dados, Erro e Vazio) e filtros interativos por loja/busca/ordenação.
-  3. **Automação**: Workflow do GitHub Actions (`.github/workflows/scraper.yml`) configurado com agendamento cron diário à meia-noite (03:00 UTC / 00:00 BRT), disparo manual e commit automático das alterações no `ofertas.json`.
-  4. **Documentação & Base**: Arquivo `ofertas.json` inicial com 40 ofertas completas, `package.json`, `.gitignore` e `README.md` detalhado.
+- Identificação da causa raiz da falha no GitHub Actions:
+  - O step `actions/setup-node@v4` com `cache: 'npm'` exigia a presença do arquivo de lockfile (`package-lock.json`).
+  - O arquivo `package-lock.json` estava no `.gitignore` e não havia sido commitado.
+  - Foi gerado o `package-lock.json` oficial com `npm install`, removida a restrição do `.gitignore` e atualizado o Node.js para versão 22 (LTS) no workflow `.github/workflows/scraper.yml`.
 
 ---
 
 ## ⚙️ Estado Atual
-- Sintaxe de todos os arquivos JavaScript validada com `node --check` (0 erros).
-- Validação e parsing do `ofertas.json` realizada com sucesso.
-- Estrutura pronta para execução local e deploy no GitHub Pages.
+- `package-lock.json` gerado e pronto para envio ao GitHub.
+- `.github/workflows/scraper.yml` atualizado para Node 22 com cache de dependências habilitado.
+- Repositório pronto para novo push e reexecução limpa no GitHub Actions.
 
 ---
 
-## 🎯 Próximos Passos Imediatos (Recomendações para o Usuário)
-1. Instalar as dependências com `npm install` caso deseje rodar a extração diretamente na máquina local.
-2. Inicializar o repositório git e subir o código para o GitHub.
-3. Habilitar **Read and write permissions** em `Settings > Actions > General > Workflow permissions` no repositório.
-4. Habilitar o **GitHub Pages** apontando para a branch `main` e diretório `/ (root)`.
+## 🎯 Próximos Passos Imediatos
+1. Fazer `git add .`, commit e `git push origin main`.
+2. Reexecutar o workflow no GitHub Actions para validar a execução bem-sucedida do scraper na nuvem.
