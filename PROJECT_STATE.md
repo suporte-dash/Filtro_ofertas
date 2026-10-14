@@ -2,27 +2,28 @@
 
 ## 📌 Status Geral
 - **Data:** 14/10/2026
-- **Status:** Correção do GitHub Actions Workflow (Lockfile e Node.js 22)
+- **Status:** 🛡️ Pipeline Resiliente Ativo (Cache Preservation & Proteção Anti-Wipe)
 - **Repositório Oficial:** [suporte-dash/Filtro_ofertas](https://github.com/suporte-dash/Filtro_ofertas)
 - **Painel Online (GitHub Pages):** [https://suporte-dash.github.io/Filtro_ofertas/](https://suporte-dash.github.io/Filtro_ofertas/)
 
 ---
 
 ## 📌 Onde Parámos
-- Identificação da causa raiz da falha no GitHub Actions:
-  - O step `actions/setup-node@v4` com `cache: 'npm'` exigia a presença do arquivo de lockfile (`package-lock.json`).
-  - O arquivo `package-lock.json` estava no `.gitignore` e não havia sido commitado.
-  - Foi gerado o `package-lock.json` oficial com `npm install`, removida a restrição do `.gitignore` e atualizado o Node.js para versão 22 (LTS) no workflow `.github/workflows/scraper.yml`.
+- O workflow do GitHub Actions executou com sucesso (status verde em 1m 22s).
+- Identificamos e mitigamos o risco de "wipeout" de dados: quando proteções anti-bot ou desafios bloqueiam um runner em nuvem, o pipeline agora **preserva 100% dos dados prévios em cache**.
+- `src/index.js` foi aprimorado com merge inteligente de dados por loja: lojas com sucesso são atualizadas, e lojas com bloqueio temporário mantêm o catálogo prévio intacto.
+- As 40 ofertas ricas foram restauradas no `ofertas.json`.
+- `src/utils/browser.js` foi atualizado para compatibilidade nativa com Puppeteer 23+ em Node 22/24.
 
 ---
 
 ## ⚙️ Estado Atual
-- `package-lock.json` gerado e pronto para envio ao GitHub.
-- `.github/workflows/scraper.yml` atualizado para Node 22 com cache de dependências habilitado.
-- Repositório pronto para novo push e reexecução limpa no GitHub Actions.
+- Catálogo de 40 ofertas restaurado e garantido contra remoção acidental.
+- Pipeline com proteção contra sobrescrita com dados vazios.
+- Pronto para envio (`git push`) para a branch `main`.
 
 ---
 
 ## 🎯 Próximos Passos Imediatos
 1. Fazer `git add .`, commit e `git push origin main`.
-2. Reexecutar o workflow no GitHub Actions para validar a execução bem-sucedida do scraper na nuvem.
+2. Validar que o painel online no GitHub Pages reflete imediatamente os 40 produtos ativos.
