@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-23T08:14:49.730Z",
-  "updatedAtFormatted": "sexta-feira, 23 de outubro de 2026 às 05:14:49",
+  "updatedAt": "2026-10-24T07:53:17.508Z",
+  "updatedAtFormatted": "sábado, 24 de outubro de 2026 às 04:53:17",
   "totalDeals": 40,
   "stores": {
     "Kabum": 10,
@@ -350,16 +350,6 @@
       "image": "https://images.kabum.com.br/produtos/fotos/833991/cadeira-gamer-husky-storm-100-ate-120kg-almofadas-reclinavel-135-pu-preta-e-branca-hcg100ptbr_1774548809_original.jpg"
     },
     {
-      "title": "Cadeira Gamer Husky Storm 100, Até 120kg, Almofadas, Reclinável 135º, Tecido, Preta - HCG100PTT",
-      "price": "R$ 529,90",
-      "priceNumeric": 529.9,
-      "originalPrice": "R$ 588,78",
-      "discount": "10% OFF",
-      "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/886242",
-      "image": "https://images.kabum.com.br/produtos/fotos/886242/cadeira-gamer-husky-storm-100-ate-120kg-almofadas-reclinavel-135-tecido-preta-hcg100ptt_1774548094_original.jpg"
-    },
-    {
       "title": "Cadeira Gamer Husky Tempest 700, Até 145kg, Almofadas, Reclinável 150º, PU, Descanso para Pés, Preta - HCG700PT",
       "price": "R$ 1.099,90",
       "priceNumeric": 1099.9,
@@ -368,6 +358,16 @@
       "store": "Kabum",
       "url": "https://www.kabum.com.br/produto/134176",
       "image": "https://images.kabum.com.br/produtos/fotos/134176/cadeira-gamer-husky-tempest-700-ate-145kg-almofadas-reclinavel-150-pu-descanso-para-pes-preta-hcg700pt_1760035650_original.jpg"
+    },
+    {
+      "title": "Cadeira Gamer Husky Storm 100, Até 120kg, Almofadas, Reclinável 135º, Tecido, Preta - HCG100PTT",
+      "price": "R$ 529,90",
+      "priceNumeric": 529.9,
+      "originalPrice": "R$ 588,78",
+      "discount": "10% OFF",
+      "store": "Kabum",
+      "url": "https://www.kabum.com.br/produto/886242",
+      "image": "https://images.kabum.com.br/produtos/fotos/886242/cadeira-gamer-husky-storm-100-ate-120kg-almofadas-reclinavel-135-tecido-preta-hcg100ptt_1774548094_original.jpg"
     },
     {
       "title": "Cadeira Gamer Husky Tempest 700, Até 145kg, Almofadas, Reclinável 150º, PU, Descanso para Pés, Branca - HCG700BR",
@@ -380,16 +380,6 @@
       "image": "https://images.kabum.com.br/produtos/fotos/134179/cadeira-gamer-husky-tempest-700-ate-145kg-almofadas-reclinavel-150-pu-descanso-para-pes-branca-hcg700br_1760101546_original.jpg"
     },
     {
-      "title": "Cadeira Gamer Rise Mode Z11, Ângulo Ajustável, Tecido, Preto - RM-CG-Z11-BK",
-      "price": "R$ 549,90",
-      "priceNumeric": 549.9,
-      "originalPrice": "R$ 597,72",
-      "discount": "8% OFF",
-      "store": "Kabum",
-      "url": "https://www.kabum.com.br/produto/1007914",
-      "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/1007914/xlarge/Cadeira-Gamer-Rise-Mode-Z11-ngulo-Ajust-vel-Tecido-Preto-RM-CG-Z11-BK_1787324021.jpg"
-    },
-    {
       "title": "Cadeira Gamer Husky Tempest 700, Até 145kg, Almofadas, Reclinável 150º, Tecido, Descanso para Pés, Preta - HCG700PTT",
       "price": "R$ 1.099,90",
       "priceNumeric": 1099.9,
@@ -398,6 +388,16 @@
       "store": "Kabum",
       "url": "https://www.kabum.com.br/produto/886244",
       "image": "https://images.kabum.com.br/produtos/fotos/886244/cadeira-gamer-husky-tempest-700-ate-145kg-almofadas-reclinavel-150-tecido-descanso-para-pes-preta-hcg700ptt_1760549495_original.jpg"
+    },
+    {
+      "title": "Cadeira Gamer Rise Mode Z11, Ângulo Ajustável, Tecido, Preto - RM-CG-Z11-BK",
+      "price": "R$ 549,90",
+      "priceNumeric": 549.9,
+      "originalPrice": "R$ 597,72",
+      "discount": "8% OFF",
+      "store": "Kabum",
+      "url": "https://www.kabum.com.br/produto/1007914",
+      "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/1007914/xlarge/Cadeira-Gamer-Rise-Mode-Z11-ngulo-Ajust-vel-Tecido-Preto-RM-CG-Z11-BK_1787324021.jpg"
     },
     {
       "title": "Cadeira Gamer Husky Tempest 700, Até 145kg, Almofadas, Reclinável 150º, PU, Descanso para Pés, Preta e Vermelha - HCG700PTVR",
